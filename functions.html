@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Ex1
+        function getMax(a, b) {
+            return(a>b)? a : b
+        }
+        //Ex2
+        function incrementIfEqual(a, b) {
+            return(a===b) ? a+1 : a
+        }
+        //Ex3
+        function findSmallerOrSpecial(a, b, c, d) {
+            if (a >= 1 && a <= 5 || b >= 1 && b <= 5 || c >= 1 && c <= 5 || d >= 1 && d <= 5) {
+                return -1;
+            } else {
+                return Math.min(a, b, c, d);
+            }
+        }
+        //Ex4
+        function checkEvenOrNotEven(number) {
+            return number % 2 === 0 ? "even" : "not even";
+        }
+        //Ex5
+        function checkNumberEquality(a, b, c, d) {
+            if (a === b && b === c && c === d) {
+                return "all equals";
+            } else if ((a === b && c !== a && d !== a) ||
+                (a === c && b !== a && d !== a) ||
+                (a === d && b !== a && c !== a) ||
+                (b === c && a !== b && d !== b) ||
+                (b === d && a !== b && c !== b) ||
+                (c === d && a !== c && b !== c)) {
+                return "only 2 numbers are equals";
+            } else {
+                return "all numbers not equals";
+            }
+        }
+        //Ex6
+        function getDayOfWeek(number) {
+            switch (number) {
+                case 1:
+                    return "Sunday";
+                case 2:
+                    return "Monday";
+                case 3:
+                    return "Tuesday";
+                case 4:
+                    return "Wednesday";
+                case 5:
+                    return "Thursday";
+                case 6:
+                    return "Friday";
+                case 7:
+                    return "Saturday";
+                default:
+                    return "Error";
+            }
+        }
+        //Ex7
+        function getDaysInMonth(monthNumber) {
+            if (monthNumber < 1 || monthNumber > 12) {
+                return -1;
+            }
+
+            switch (monthNumber) {
+                case 1: // January
+                case 3: // March
+                case 5: // May
+                case 7: // July
+                case 8: // August
+                case 10: // October
+                case 12: // December
+                    return 31;
+                case 2: // February
+                    return 28;
+                case 4: // April
+                case 6: // June
+                case 9: // September
+                case 11: // November
+                    return 30;
+            }
+        }
+        //Ex8
+        let globalCounter = 0;
+
+        function incrementGlobalCounter() {
+            globalCounter++;
+            console.log("Global counter is now:", globalCounter);
+        }
+        //Ex9
+        function calculateSum(a, b) {
+            var localVar1 = a;
+            var localVar2 = b;
+            var sum = localVar1 + localVar2;
+
+            return sum;
+        }
+    </script>
+</body>
+
+</html>
